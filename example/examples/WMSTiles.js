@@ -1,12 +1,11 @@
 import React from 'react';
-import {
-  StyleSheet,
-  View,
-  Text,
-  Dimensions,
-} from 'react-native';
+import { StyleSheet, View, Text, Dimensions } from 'react-native';
 
-import MapView, { MAP_TYPES, ProviderPropType, WMSTile } from 'react-native-maps';
+import MapView, {
+  MAP_TYPES,
+  ProviderPropType,
+  WMSTile,
+} from 'react-native-maps';
 
 const { width, height } = Dimensions.get('window');
 
@@ -41,11 +40,10 @@ class WMSTiles extends React.Component {
           initialRegion={region}
         >
           <WMSTile
-            urlTemplate="https://demo.geo-solutions.it/geoserver/tiger/wms?service=WMS&version=1.1.0&request=GetMap&layers=tiger:poi&styles=&bbox={minX},{minY},{maxX},{maxY}&width={width}&height={height}&srs=EPSG:4326&format=image/png&transparent=true&format_options=dpi:213"
+            urlTemplate="https://demo.geo-solutions.it/geoserver/tiger/wms?service=WMS&version=1.1.0&request=GetMap&layers=tiger:poi&styles=&bbox={minX},{minY},{maxX},{maxY}&width={width}&height={height}&srs=EPSG:900913&format=image/png&transparent=true&format_options=dpi:213"
             zIndex={1}
             opacity={0.5}
             tileSize={512}
-            epsgSpec={"EPSG:4326"}
           />
         </MapView>
         <View style={styles.buttonContainer}>

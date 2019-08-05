@@ -24,7 +24,6 @@
 @property (nonatomic, strong) MKTileOverlay *tileOverlay;
 @property (nonatomic, strong) MKTileOverlayRenderer *renderer;
 @property (nonatomic, copy) NSString *urlTemplate;
-@property (nonatomic, copy) NSString *epsgSpec;
 @property NSInteger maximumZ;
 @property NSInteger minimumZ;
 @property NSInteger tileSize;
@@ -38,6 +37,5 @@
 @end
 
 @interface TileOverlay : MKTileOverlay
-@property (nonatomic, copy) NSString *epsgSpec;
--(id) initWithURLTemplate:(NSString *)URLTemplate Spec:(NSString*) spec;
+@property (nonatomic) double MapX,MapY,FULL;
 @end

@@ -12,8 +12,8 @@
 #import <GoogleMaps/GoogleMaps.h>
 
 @interface WMSTileOverlay : GMSSyncTileLayer
+@property (nonatomic) double MapX,MapY,FULL;
 @property (nonatomic, strong) NSString *template;
-@property (nonatomic, strong) NSString *epsgSpec;
 @property (nonatomic, assign) NSInteger maximumZ;
 @property (nonatomic, assign) NSInteger minimumZ;
 @end
@@ -21,7 +21,6 @@
 @interface AIRGoogleMapWMSTile : UIView
 @property (nonatomic, strong) WMSTileOverlay *tileLayer;
 @property (nonatomic, assign) NSString *urlTemplate;
-@property (nonatomic, assign) NSString *epsgSpec;
 @property (nonatomic, assign) int zIndex;
 @property (nonatomic, assign) NSInteger maximumZ;
 @property (nonatomic, assign) NSInteger minimumZ;
